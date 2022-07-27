@@ -25,61 +25,56 @@ In the first part of the second step, it was necessary to sample the target valu
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291035-87581c5d-5187-4031-96fd-3550c924616a.png">
-
-Figure 1 - results of sampling target values using inverse transform method (blue - original data, orange - sampled data)
 </p>
+<h5 align="center">Figure 1 - results of sampling target values using inverse transform method (blue - original data, orange - sampled data)</h5>
 
 Next, in the second step, it was necessary to sample the target values using the Accept-Reject method. To do this, it was necessary to select a function similar to the target value distribution and multiply this function by the Scale Factor so that the target value distribution is completely below it. Figure 2 shows the target function distribution values and the selected functions that are required for the Accept-Reject method.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291147-33df03d8-a301-4ae7-8e2e-9df7c5205fab.png">
-
-Figure 2 - target functions distributions values t(x) (blue) and chosen functions h(x) (orange); ‘M‘ in the title stands for the Scale Factor value
 </p>
+<h5 align="center">Figure 2 - target functions distributions values t(x) (blue) and chosen functions h(x) (orange); ‘M‘ in the title stands for the Scale Factor value</h5>
  
 Figure 3 shows histograms of the distributions of the initial and generated target values.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291251-b2e33294-a669-433f-9409-267ed515fe9a.png">
-
-Figure 3 - results of sampling target values using accept-reject method
 </p>
+<h5 align="center">Figure 3 - results of sampling target values using accept-reject method</h5>
  
 ## Step 3. Estimation of relations between predictors and chosen target variables
+
 At the third step, it was necessary to assess the relationship between target and predictor values. For this, a heatmap (Figure 4) was built with the corresponding values of the correlation between all the considered quantities.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291470-bb178f1f-081e-4c66-b493-7614a6ba2614.png">
-
-Figure 4 - heatmap of absolute correlation coefficients for all considered values
 </p>
- 
+<h5 align="center">Figure 4 - heatmap of absolute correlation coefficients for all considered values</h5>
+
 ## Step 4. Building a Bayesian network for a chosen set of variables. Structure is based on multivariate analysis.
 
 At the fourth step, a Bayesian network was built based on a multivariate analysis of the selected features. The data for analysis was taken from the previous step, namely from the heatmap with correlation values. Figure 5 shows a graph that reflects the structure of the constructed Bayesian network.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291588-2d352e6e-bfce-42d2-842a-fcd355d65cfb.png">
-
-Figure 5 - Graph of Bayesian network with a structure based on multivariate analysis
 </p>
+<h5 align="center">Figure 5 - Graph of Bayesian network with a structure based on multivariate analysis</h5>
 
 ## Step 5. Building a Bayesian network for the same set of variables using 2 algorithms for structural learning
+
 The fifth step was to build a Bayesian network using algorithms for structural learning. The first network was built using K2 and the Hill Climb algorithm. Figure 6 shows a graph that reflects the structure of the constructed Bayesian  network.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291725-b02c7ea5-bb64-48f1-a959-305f2777137f.png">
-
-Figure 6 - Graph of BN made with using Hill Climb algorithm and K2
 </p>
+<h5 align="center">Figure 6 - Graph of BN made with using Hill Climb algorithm and K2</h5>
 
 The second network was built using the evolutionary algorithm and MI. Figure 7 shows a graph that reflects the structure of the constructed Bayesian network.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291783-56a1c0ad-77af-4452-83ba-d81e5a4a7846.png">
-
-Figure 7 - Graph of BN made with using Evolutionary algorithm and MI
 </p>
+<h5 align="center">Figure 7 - Graph of BN made with using Evolutionary algorithm and MI</h5>
 
 ## Step 6. Analyzing quality of sampled target variables from the point of view of synthetic generation
 
@@ -87,16 +82,14 @@ At the sixth step, it was necessary to analyze the quality of the sampled target
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291926-e3dcba21-3238-4aac-b6e8-395cc736e7f2.png">
-
-Figure 8 - Results of sampling target values using Bayesian network made with multivariate analysis
 </p>
+<h5 align="center">Figure 8 - Results of sampling target values using Bayesian network made with multivariate analysis</h5>
 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/33491221/181291946-d71d908b-5710-4d66-902a-7f617dbe4376.png">
-
-Figure 9 - Results of sampling target values using Bayesian network made with structure-learning methods
 </p>
+<h5 align="center">Figure 9 - Results of sampling target values using Bayesian network made with structure-learning methods</h5>
 
 ## Conclusion
 As a result of the work, various sampling methods were investigated and implemented for the ozone dataset. In the course of comparing the results of sampling by various methods, it was revealed that each of the methods made it possible to obtain high-quality synthetic data for the dataset under consideration.
